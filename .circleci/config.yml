@@ -54,7 +54,7 @@ jobs:
           at: /tmp
   
       - run:
-          name: Deploy app
+          name: Deploy app 
           command: npx netlify-cli deploy  --auth $NETLIFY_AUTH_TOKEN --site $NETLIFY_SITE_ID --dir /tmp/server-doc --prod
   back-test-unit:
     docker:
