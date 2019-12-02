@@ -109,11 +109,11 @@ jobs:
       - deploy:
           name: Publish application to docker hub
           command: |
-            docker login -u $DOCKER_HUB_USER_ID -p $DOCKER_HUB_PWD
-            docker tag app $DOCKER_HUB_USER_ID/my-awesome-ci-expr:$CIRCLE_BUILD_NUM
-            docker tag app $DOCKER_HUB_USER_ID/my-awesome-ci-expr:latest
-            docker push $DOCKER_HUB_USER_ID/my-awesome-ci-expr:$CIRCLE_BUILD_NUM
-            docker push $DOCKER_HUB_USER_ID/my-awesome-ci-expr:latest
+            docker login -u $DOCKER_USER_NAME -p $DOCKER_PSWD
+            docker tag app $DOCKER_USER_NAME/my-awesome-ci-expr:$CIRCLE_BUILD_NUM
+            docker tag app $DOCKER_USER_NAME/my-awesome-ci-expr:latest
+            docker push $DOCKER_USER_NAME/my-awesome-ci-expr:$CIRCLE_BUILD_NUM
+            docker push $DOCKER_USER_NAME/my-awesome-ci-expr:latest
 
   back-deploy-heroku:
     docker:
