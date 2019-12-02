@@ -55,7 +55,7 @@ jobs:
   
       - run:
           name: Deploy app
-          command: npx netlify-cli deploy --prod --auth $NETLIFY_AUTH_TOKEN --site $HEROKU_APP_NAME
+          command: npx netlify-cli deploy --prod --auth $NETLIFY_AUTH_TOKEN --site $NETLIFY_SITE_ID
   back-test-unit:
     docker:
       - image: circleci/node:dubnium-browsers
