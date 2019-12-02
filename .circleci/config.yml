@@ -52,12 +52,10 @@ jobs:
     steps:
       - attach_workspace:
           at: /tmp
-      - run:
-          name: install netlify
-          command: npm install netlify-cli -g    
+  
       - run:
           name: Deploy app
-          command: netlify deploy --prod --auth $NETLIFY_AUTH_TOKEN
+          command: npx netlify-cli deploy --prod --auth $NETLIFY_AUTH_TOKEN
   back-test-unit:
     docker:
       - image: circleci/node:dubnium-browsers
