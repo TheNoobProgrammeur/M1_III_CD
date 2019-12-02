@@ -121,7 +121,7 @@ jobs:
       - checkout
       - run:
           name: Heroku Deploy
-          command: echo todo && false
+          command: git push  https://git.heroku.com/guarded-chamber-15621.git master
       - run:
           name: Smoke Test
           command: echo todo && false
